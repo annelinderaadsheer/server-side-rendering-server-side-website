@@ -25,12 +25,22 @@ app.get("/", function (request, response) {
   response.render("homepage");
 });
 
-// Contact pagina
+//Contact pagina
 app.get("/contact", function (request, response) {
   response.render("contact");
 });
 
-//Eigen data inladen
+//About pagina
+app.get("/about", function (request, response) {
+  response.render("about");
+});
+
+//FAQ pagina
+app.get("/faq", function (request, response) {
+  response.render("faq");
+});
+
+//Vraag-aanbod pagina, eigen data inladen 
 app.get("/vraag-aanbod", function (request, response) {
   fetchJson("https://fdnd-agency.directus.app/items/dh_services").then(
     (apiData) => {
