@@ -1,1 +1,52 @@
 <% console.log(vraagaanbod) %>
+
+<%- include('./partials/head.ejs') -%> 
+
+<%- include('./homepage.ejs') -%> 
+
+<%- include('./index.ejs') -%> 
+
+<section class="vraagaanbod"> 
+    <article>
+        <% console.log(vraagaanbod) %> 
+
+        <!-- Titel van het vraagaanbod -->
+        <h2> <%= vraagaanbod.title %></h2>
+        
+        <!-- Startdatum van het vraagaanbod -->
+        <p>Startdatum: <%= vraagaanbod.start_date %></p>
+        
+        <!-- Einddatum van het vraagaanbod -->
+        <p>Einddatum: <%= vraagaanbod.end_date %></p>
+        
+        <!-- Buurt waar het vraagaanbod plaatsvindt -->
+        <p>Buurt: <%= vraagaanbod.neighbourhood %></p>
+        
+        <!-- Optioneel: tijd van het vraagaanbod -->
+        <% if (vraagaanbod.time) { %>
+            <p>Tijd: <%= vraagaanbod.time %></p>
+        <% } %>
+
+        <p class="over-vraagaanbod-tekst"> <%= vraagaanbod.long_description %> </p>
+
+    </article>
+
+    <!-- Afbeelding van het vraagaanbod -->
+    <% if (vraagaanbod.image) { %>
+        <img src="https://fdnd-agency.directus.app/assets/<%= vraagaanbod.image %>"            
+        alt="<%- vraagaanbod.short_description %>">
+    <% } %>
+</section>
+
+<section class="contact"> <!-- Gedeelte voor contactgegevens -->
+    <img src="images/profilepicture.webp" alt="profielfoto">
+    <article>
+        <!-- Naam van de contactpersoon -->
+        <p>Naam: <span> kiwitaart </span></p>
+        
+        <!-- E-mailadres van de contactpersoon -->
+        <p>E-mail: <span> kiwitaart@gmail.com </span></p>
+    </article>
+</section>
+
+<%- include('./partials/foot.ejs') -%> <!-- Voeg de voettekst toe -->
