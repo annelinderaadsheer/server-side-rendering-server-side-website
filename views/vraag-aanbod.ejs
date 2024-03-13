@@ -5,35 +5,34 @@
 
 
 <section class="vraagaanbod"> 
-    <article>
-        <% console.log(vraagaanbod) %> 
-
+    <!-- Doe dit meerdere keren.. -->
+    <% vraagaanbod.forEach(function(initatief) {%>
+        <article>
         <!-- Titel van het vraagaanbod -->
-        <h2> <%= vraagaanbod.title %></h2>
-        
+        <h2> <%= initatief.title %></h2>
+            
         <!-- Startdatum van het vraagaanbod -->
-        <p>Startdatum: <%= vraagaanbod.start_date %></p>
-        
+        <p>Startdatum: <%= initatief.start_date %></p>
+            
         <!-- Einddatum van het vraagaanbod -->
-        <p>Einddatum: <%= vraagaanbod.end_date %></p>
-        
+        <p>Einddatum: <%= initatief.end_date %></p>
+            
         <!-- Buurt waar het vraagaanbod plaatsvindt -->
-        <p>Buurt: <%= vraagaanbod.neighbourhood %></p>
-        
+        <p>Buurt: <%= initatief.neighbourhood %></p>
+            
         <!-- Optioneel: tijd van het vraagaanbod -->
-        <% if (vraagaanbod.time) { %>
-            <p>Tijd: <%= vraagaanbod.time %></p>
+        <% if (initatief.time) { %>
+        <p>Tijd: <%= initatief.time %></p>
         <% } %>
 
-        <p class="over-vraagaanbod-tekst"> <%= vraagaanbod.long_description %> </p>
-
-    </article>
-
-    <!-- Afbeelding van het vraagaanbod -->
-    <% if (vraagaanbod.image) { %>
-        <img src="https://fdnd-agency.directus.app/assets/<%= vraagaanbod.image %>"            
-        alt="<%- vraagaanbod.short_description %>">
-    <% } %>
+        <p class="over-vraagaanbod-tekst"> <%= initatief.long_description %> </p>
+        <!-- Afbeelding van het vraagaanbod -->
+        <% if (initatief.image) { %>
+        <img src="https://fdnd-agency.directus.app/assets/<%= initatief.image %>"            
+        alt="<%- initatief.short_description %>">
+        <% } %>
+        </article>
+        <%});%>
 </section>
 
 <section class="contact"> <!-- Gedeelte voor contactgegevens -->
