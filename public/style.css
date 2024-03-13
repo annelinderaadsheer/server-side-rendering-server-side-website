@@ -1,3 +1,4 @@
+/* Variabelen */
 :root {
   --primary: rgb(167, 208, 183);
   --dark: #333;
@@ -7,8 +8,8 @@
 
 html {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--darl);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: var(--dark);
 }
 
 body {
@@ -17,24 +18,34 @@ body {
   line-height: 1.4;
 }
 
+/* BUTTON opdracht aanmelden */
 .btn {
-  background: var(--dark);
   color: var(--light);
-  padding: 0.6rem 0.3rem;
+  background: var(--primary);
+  padding: 20px;
   text-decoration: none;
-  border: 0;
-  border-radius: 2px;
+  border: none;
+  border-radius: 7px;
   max-width: 150px;
   text-align: center;
+  display: block;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
 }
 
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
+.btn:hover {
+  background: var(--light);
+  color: var(--dark);
 }
 
 /* NAVIGATION */
-
 .main-nav ul {
   display: grid;
   grid-gap: 20px;
@@ -47,12 +58,20 @@ body {
   background: var(--primary);
   display: block;
   text-decoration: none;
-  padding: 0.8rem;
   text-align: center;
   color: var(--dark);
   text-transform: uppercase;
-  font-size: 1.1rem;
   box-shadow: var(--shadows);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	color: white;
+	font-size: 18px;
+	padding: 20px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 700;
 }
 
 .main-nav a:hover {
@@ -61,7 +80,6 @@ body {
 }
 
 /* TOP CONTAINER */
-
 .top-container {
   display: grid;
   grid-gap: 20px;
@@ -80,22 +98,28 @@ body {
   align-items: start;
   justify-content: center;
   box-shadow: var(--shadow);
+  position: fixed; 
 }
 
 .display h1 {
   font-size: 4rem;
   margin-bottom: 0;
   color: var(--light);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .display p {
   font-size: 1.3rem;
   margin-top: 0;
   color: var(--light);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* FOOTER */
-
 footer {
   margin-top: 2rem;
   background: var(--dark);
@@ -108,8 +132,26 @@ footer {
   width: 100%;
 }
 
-/*   MEDIA QUERIES */
+footer a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  box-shadow: var(--shadows);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	color: white;
+	font-size: 18px;
+	padding: 20px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 700;
+}
 
+/*   MEDIA QUERIES */
 @media (max-width: 767px) {
   .top-container {
     grid-template-areas:
@@ -139,3 +181,75 @@ footer {
       "footer"
   }
 }
+
+/* FORM opdracht aanmelden*/
+#form-div {
+	background-color: var(--dark);
+	padding: 15px;
+	width: 450px;
+	left: 50%;
+	position: absolute;
+	margin-top: 30px;
+	margin-left: -260px;
+	border-radius: 7px;
+}
+
+.feedback-input {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	border: none;
+	background-color: #fbfbfb;
+	padding: 13px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.feedback-input:focus {
+	background: #fff;
+	border: 3px solid var(--primary);
+	outline: none;
+	padding: 13px;
+}
+
+#button-send {
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	background-color: var(--primary);
+	color: white;
+	font-size: 18px;
+	padding: 20px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 700;
+}
+
+#button-send:hover {
+	background-color: #fbfbfb;
+	color: var(--primary);
+}
+
+.ease {
+	width: 0;
+	height: 74px;
+	background-color: #fbfbfb;
+	transition: .3s ease;
+}
+
+.submit:hover .ease {
+	width: 100%;
+	background-color: white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div {
+		left: 3%;
+		margin: 30px auto;
+		width: 88%;
+		padding: 0 15px;
+	}
+}
+
+

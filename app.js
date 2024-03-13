@@ -40,6 +40,11 @@ app.get("/faq", function (request, response) {
   response.render("faq");
 });
 
+//Opdracht pagina
+app.get("/opdracht", function (request, response) {
+  response.render("opdracht");
+});
+
 //Vraag-aanbod pagina, eigen data inladen 
 app.get("/vraag-aanbod", function (request, response) {
   fetchJson("https://fdnd-agency.directus.app/items/dh_services").then(
@@ -59,4 +64,3 @@ app.listen(app.get("port"), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get("port")}`);
 });
-
