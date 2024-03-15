@@ -14,8 +14,8 @@
 
 ## Beschrijving
 De bedoeling voor deze opdracht is het ontwerpen en ontwikkelen van een online platform waar buurtinitatieven in Amsterdam Oud-West verzameld en bekeken kunnen worden. Het gaat hier om vraag & aanbod.
-<!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
+<img width="957" alt="Scherm­afbeelding 2024-03-15 om 10 36 17" src="https://github.com/annelinderaadsheer/server-side-rendering-server-side-website/assets/144004885/3a8b6495-a102-4613-ad78-a217d50df179">
 
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
